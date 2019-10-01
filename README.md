@@ -12,3 +12,16 @@ https://tproger.ru/translations/design-patterns-simple-words-1/
 - Build             :white_check_mark:
 - Prototype         :white_check_mark:
 - Singleton         :white_check_mark:
+
+## Part 2 (Composition)
+[Link of article](https://tproger.ru/translations/design-patterns-simple-words-2/)
+``` url 
+https://tproger.ru/translations/design-patterns-simple-words-2/
+```
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
