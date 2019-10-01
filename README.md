@@ -6,9 +6,9 @@ This practice based on articles series about oop patterns
 ``` url 
 https://tproger.ru/translations/design-patterns-simple-words-1/
 ```
-- Simple Factory :white_check_mark:
-- Factory Method
-- Abstract Factory
-- Build
-- Prototype
-- Singleton
+- Simple Factory    :white_check_mark:
+- Factory Method    :white_check_mark:
+- Abstract Factory  :white_check_mark:
+- Build             :white_check_mark:
+- Prototype         :white_check_mark:
+- Singleton         :white_check_mark:

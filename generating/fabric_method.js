@@ -1,33 +1,56 @@
-class Car {
-    constructor(manufactured, model) {
-        this._model = model;
-        this._manufactured = manufactured;
-    }
+class Engine {
+    getSpetialisation() {
+        return "Repare egine"
+    }    
+}
 
-    get model () {
-        return this._model;
-    }
-    get manufactured () {
-        return this._manufactured;
+class Transmission {
+    getSpetialisation() {
+        return "Repare transmissinon"
+    }   
+}
+
+class CarMechanic {
+    _getReparePart() {}
+    whanHeDo() {
+        const mechanic = this._getReparePart();
+        console.log
+        return mechanic.getSpetialisation()
     }
 }
 
-class CarFactory {
-    static makeCar(manufactured, model) {
-        return new Car(manufactured, model)
+class EgineMechanic extends CarMechanic {
+    _getReparePart() {
+        console.log('Make engine mechanic');
+        return new Engine();
+    }
+}
+
+class TransmissionMechanic extends CarMechanic {
+    _getReparePart() {
+        console.log('Make transmission mechanic');
+        return new Transmission();
     }
 }
 
 module.exports = {
-    title: "Factory Method",
-    description: "Фабричный метод — порождающий шаблон проектирования, предоставляющий подклассам интерфейс для создания экземпляров некоторого класса. В момент создания наследники могут определить, какой класс создавать. Иными словами, данный шаблон делегирует создание объектов наследникам родительского класса. Это позволяет использовать в коде программы не специфические классы, а манипулировать абстрактными объектами на более высоком уровне.",
+    title: "Simple Factory",
+    description: "В объектно-ориентированном программировании (ООП), фабрика — это объект для создания других объектов. Формально фабрика — это функция или метод, который возвращает объекты изменяющегося прототипа или класса из некоторого вызова метода, который считается «новым».",
     classes: {
-        Car
+        Engine,
+        Transmission,
+        CarMechanic,
+        EgineMechanic,
+        TransmissionMechanic
     },
     demonstration() {
         return new Promise( resolve => {
-            const car = CarFactory.makeCar("Ford", "Focus");
-            resolve(`${car.manufactured} ${car.model}`)
+            const engineMech = new EgineMechanic();
+            const transmissionMech = new TransmissionMechanic();
+            for(key in transmissionMech) {
+                console.log(key);
+            }
+            resolve(`engine ${engineMech.whanHeDo()}\ntransmission ${transmissionMech.whanHeDo()}`);
         });
         
     }
