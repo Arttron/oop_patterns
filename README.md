@@ -25,3 +25,6 @@ https://tproger.ru/translations/design-patterns-simple-words-2/
 - Facade
 - Flyweight
 - Proxy
+
+## NOTES
+[Helper of oop patterns](http://www.mcdonaldland.info/files/designpatterns/designpatternscard.pdf)
